@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños Tebitan!</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* Tipografías elegantes */
+        .font-script {
+            font-family: 'Dancing Script', cursive;
+        }
+        .font-body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Fondo Oscuro Galáctico con Degradado */
+        body {
+            background: radial-gradient(ellipse at bottom, #11141a 0%, #06070a 100%);
+            min-height: 100vh;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        /* Fondo de Estrellas Parpadeantes */
+        .stars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            background-color: #ffffff;
+            border-radius: 50%;
+            animation: pulse-star linear infinite alternate;
+        }
+
+        @keyframes pulse-star {
+            0% { opacity: 0.15; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.3); }
+        }
+
+        /* Tarjeta Principal con Tonos #DBD0BA */
+        .custom-card {
+            background-color: #DBD0BA;
+            box-shadow: 0 0 40px rgba(22, 66, 120, 0.4), 0 0 20px rgba(164, 4, 0, 0.25);
+        }
+
+        /* Llama Animada del Pastel en Pixel Art */
+        @keyframes flameFlicker {
+            0% { transform: scale(1) translateY(0); filter: drop-shadow(0 0 4px #ff9900); }
+            50% { transform: scale(1.2) translateY(-1px); filter: drop-shadow(0 0 8px #ff0000); }
+            100% { transform: scale(0.9) translateY(1px); filter: drop-shadow(0 0 6px #ffcc00); }
+        }
+
+        .pixel-flame {
+            animation: flameFlicker 0.4s infinite alternate ease-in-out;
+            transform-origin: center bottom;
+        }
+
+        /* Sables de Luz de Adorno */
+        .glow-red {
+            filter: drop-shadow(0 0 8px rgba(164, 4, 0, 0.7));
+        }
+
+        .glow-blue {
+            filter: drop-shadow(0 0 8px rgba(22, 66, 120, 0.7));
+        }
+    </style>
+</head>
+<body class="font-body flex items-center justify-center min-h-screen p-4 sm:p-6 relative">
+
+    <!-- Estrellas Animadas -->
+    <div id="stars" class="stars-container"></div>
+
+    <!-- Contenedor de la Tarjeta -->
+    <main class="custom-card w-full max-w-xl rounded-3xl p-6 sm:p-10 relative z-10 border border-[#c4b69c] my-auto">
+        
+        <!-- Adorno Superior (Estilo Sables de Luz) -->
+        <div class="flex justify-between items-center mb-6 px-2">
+            <div class="h-1.5 w-16 sm:w-28 bg-[#A40400] rounded-full glow-red"></div>
+            <span class="text-xs sm:text-sm tracking-widest uppercase font-bold text-[#164278] opacity-80">May the love be with you</span>
+            <div class="h-1.5 w-16 sm:w-28 bg-[#164278] rounded-full glow-blue"></div>
+        </div>
+
+        <!-- 1. Pastel de Cumpleaños Animado en Pixel Art -->
+        <div class="flex justify-center my-4">
+            <div class="p-3 bg-[#2c1d11]/10 rounded-2xl border border-[#164278]/20 shadow-inner">
+                <svg width="150" height="150" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32 sm:w-40 sm:h-40 image-rendering-pixelated">
+                    <!-- Fuego de la Vela -->
+                    <rect x="7" y="1" width="2" height="2" fill="#FFD700" class="pixel-flame" />
+                    <rect x="7.5" y="1.5" width="1" height="1" fill="#FF4500" class="pixel-flame" />
+                    
+                    <!-- Mecha y Cuerpo de Vela -->
+                    <rect x="7.5" y="3" width="1" height="1" fill="#111111" />
+                    <rect x="7" y="4" width="2" height="3" fill="#E0E0E0" />
+                    <rect x="7" y="4" width="1" height="3" fill="#FFFFFF" />
+
+                    <!-- Cobertura Superior -->
+                    <rect x="4" y="7" width="8" height="2" fill="#A40400" />
+                    <rect x="4" y="8" width="1" height="1" fill="#FFD700" />
+                    <rect x="7" y="8" width="1" height="1" fill="#FFD700" />
+                    <rect x="10" y="8" width="1" height="1" fill="#FFD700" />
+
+                    <!-- Capa Superior del Pastel -->
+                    <rect x="4" y="9" width="8" height="2" fill="#F4A460" />
+
+                    <!-- Gotas de Glaseado Azul -->
+                    <rect x="3" y="11" width="10" height="1" fill="#164278" />
+
+                    <!-- Capa Inferior del Pastel -->
+                    <rect x="3" y="12" width="10" height="3" fill="#8B4513" />
+                    <rect x="4" y="13" width="2" height="1" fill="#D2691E" />
+                    <rect x="8" y="13" width="3" height="1" fill="#D2691E" />
+
+                    <!-- Plato -->
+                    <rect x="2" y="15" width="12" height="1" fill="#C0C0C0" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- 2. Título Principal -->
+        <h1 class="text-3xl sm:text-5xl font-script text-center text-[#A40400] font-bold mt-2 mb-3 leading-tight">
+            Happy Bday, Mi Precioso! 🎉
+        </h1>
+
+        <!-- 3. Subtítulo Cariñoso -->
+        <p class="text-base sm:text-lg text-gray-800 text-center italic mb-6 px-2 sm:px-4 leading-relaxed font-normal">
+            "Yo sé que no sé programar ni nada de eso pero igual, tú siempre sueles hacerme cosas muy bonitas programando así que ahora yo te hice algo bonito y si me criticas lloro."
+        </p>
+
+        <!-- 4. Carta Interactiva -->
+        <div id="interactiveBox" class="bg-[#EADBCE] border-2 border-dashed border-[#164278]/40 rounded-2xl p-5 sm:p-7 text-center shadow-inner my-4 transition-all duration-500">
+            
+            <!-- Mensaje Antes de Abrir -->
+            <p id="initialText" class="text-gray-800 text-base sm:text-lg font-medium mb-4">
+                Dale en el botón de abajito y mira lo que te escribí, yayy.
+            </p>
+
+            <!-- Carta Romántica Completa (Oculta al inicio) -->
+            <div id="letterContent" class="hidden text-left text-gray-800 text-base sm:text-lg leading-relaxed space-y-4 font-normal">
+                <p class="text-xl sm:text-2xl font-bold text-[#A40400] font-script">
+                    ¡Feliz Cumpleaños otra vez, mi amor! ✨
+                </p>
+                <p>
+                    Hoy es tu día tan especial y no quería darte algo común. Por eso me puse a inventar y aprender a armar esta palabrita por palabrita solo para ti, para sacarte una sonrisota enorme y recordarte cuánto te amo.
+                </p>
+                <p>
+                    Gracias por ser el novio más maravilloso de todos, por llenarme la vida de risas y por cada instante tan único que vivimos juntos. Deseo con todo mi corazón que sigamos siendo esta linda pareja que somos y que construyamos muchísimos recuerdos hermosos durante todo lo que nos quede de vida, mi corazón.
+                </p>
+                <p class="pt-2 font-semibold text-gray-900">
+                    Espero de verdad que te encante esta sorpresita hecha con todo mi amor. ¡Te amo infinitoooo! ❤️
+                </p>
+            </div>
+
+            <!-- Botón de Despliegue -->
+            <div id="buttonWrapper" class="mt-3">
+                <button 
+                    id="revealBtn"
+                    onclick="revealLetter()"
+                    class="bg-[#A40400] hover:bg-[#800300] text-white font-semibold text-base sm:text-lg py-3.5 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all duration-200 inline-flex items-center gap-2 cursor-pointer border border-[#A40400]"
+                >
+                    <span>Aquí Amor</span>
+                    <span class="text-xl">💕</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Pie de página decorativo -->
+        <footer class="mt-6 text-center">
+            <p class="text-xs sm:text-sm text-[#164278] font-bold tracking-wider uppercase">
+                Hecho especialmente para ti con todo mi amor
+            </p>
+        </footer>
+
+    </main>
+
+    <!-- Script de Estrellas y Animación -->
+    <script>
+        // Genera las estrellas en el fondo
+        function createStars() {
+            const container = document.getElementById('stars');
+            const starCount = 65;
+
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                const size = Math.random() * 2.5 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.left = `${Math.random() * 100}%`;
+                
+                star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                star.style.animationDelay = `${Math.random() * 3}s`;
+                
+                container.appendChild(star);
+            }
+        }
+
+        // Revela la carta romántica
+        function revealLetter() {
+            const initialText = document.getElementById('initialText');
+            const letterContent = document.getElementById('letterContent');
+            const buttonWrapper = document.getElementById('buttonWrapper');
+            const box = document.getElementById('interactiveBox');
+
+            box.classList.remove('border-dashed', 'border-[#164278]/40');
+            box.classList.add('border-solid', 'border-[#A40400]/30', 'bg-[#FAF4EC]');
+
+            initialText.style.opacity = '0';
+            buttonWrapper.style.opacity = '0';
+
+            setTimeout(() => {
+                initialText.classList.add('hidden');
+                buttonWrapper.classList.add('hidden');
+
+                letterContent.classList.remove('hidden');
+                letterContent.style.opacity = '0';
+                letterContent.style.transition = 'opacity 0.6s ease-in-out';
+
+                setTimeout(() => {
+                    letterContent.style.opacity = '1';
+                }, 50);
+            }, 300);
+        }
+
+        window.onload = function() {
+            createStars();
+        };
+    </script>
+</body>
+</html>
